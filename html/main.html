@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Movie Surfer</title>
+	</head>
+	<body>
+		<p> Choose Movie you want to watch </p>
+		<form action = "timetable.html" method="GET">
+			<script src="movielist.js">
+				function testJS(){
+					var url = 'http://52.26.85.179/cinemaWeb/html/timetable.html?'
+					//var b = new Array();
+					for(var i=0; i<one.length; i++){
+						if(document.getElementById(one[i]).checked){
+							var b = document.getElementById(one[i]).name;
+							url = url + b +'='+encodeURIComponent(b)+'&';
+						}
+					}
+					url = url.substring(0,url.length-1);
+				}
+			</script>
+			<button type="button" id="submit" onClick="testJS()">Submit</button>
+		</form>
+	</body>
+</html>
+			
+
