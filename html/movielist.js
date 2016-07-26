@@ -7,9 +7,6 @@ var one = new Array();
 function processRequest(e){
 	if(xhr.readyState == 4){
 		var response = JSON.parse(xhr.responseText);
-		var movielist = document.createElement("SELECT");
-		movielist.setAttribute("id","movieSelect");
-		document.body.appendChild(movielist);
 		
 		for(var i = 0, len = response.length; i < 10; i++){
 			var title = response[i].title;
@@ -18,7 +15,7 @@ function processRequest(e){
 			z.setAttribute("value", title);
 			var t = document.createTextNode(title);
 			z.appendChild(t);
-			document.getElementById("movieSelect").appendChild(z);
+			document.getElementById("movie").appendChild(z);
 		}
 	}
 }
