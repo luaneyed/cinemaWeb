@@ -10,13 +10,15 @@
 				function testJS(){
 					var url = 'http://52.26.85.179/cinemaWeb/html/timetable.html?'
 					//var b = new Array();
+					var b ="";
 					for(var i=0; i<one.length; i++){
 						if(document.getElementById(one[i]).checked){
-							var b = document.getElementById(one[i]).name;
-							url = url + b +'='+encodeURIComponent(b)+'&';
+							b = b +  document.getElementById(one[i]).name + "\,";
 						}
 					}
-					url = url.substring(0,url.length-1);
+					b = b.substring(0,b.length-1);
+					url = url + "movie='+encodeURIComponent(b)+'&';
+					document.location.href = url;
 				}
 			</script>
 			<button type="button" id="submit" onClick="testJS()">Submit</button>
