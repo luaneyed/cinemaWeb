@@ -6,8 +6,7 @@ var request =require('request');
 module.exports = function(app){
 
 	app.get('/', function(req,res){
-		fs.readFile('./html/index.html', function(error,data){ //load index.html
-			request("http://52.78.67.177")
+		fs.readFile('./html/ex.html', function(error,data){ //load index.html
 			if(error){
 				console.log(error);
 			}else{
