@@ -14,14 +14,12 @@
 					var a =0;
 					for(var i=0; i<one.length; i++){
 						if(document.getElementById(one[i]).checked){
-							b = b + document.getElementById(one[i]).name + "\,";
+							b = b + document.getElementById(one[i]).name + ",";
 							a++;
 						}
 					}
 					b = b.substring(0,b.length-1);
-					if(a>0){
-						url = url + "movie="+encodeURIComponent(b)+'&';
-					}
+					url = url + "movie="+encodeURIComponent(b)+'&';
 					document.location.href = url;
 				}
 			</script>

@@ -1,5 +1,20 @@
+<!DOCTYPE html>
 <html>
 	<head>
+		<script>
+			window.onload = function(){
+				var url = document.location.href,
+						params = url.split('?')[1].split('&'),
+						data = {}, tmp, tmp1;
+				for (var i =0, l = params.length; i <l; i++){
+					tmp = params[i].split('=');
+					tmp[1] = decodeURIComponent(tmp[1]);
+					tmp1 = tmp[1].split(',');
+					data[tmp[0]] = tmp1;
+				}
+			}
+		</script>
 	</head>
 	<body>
-		<div 
+	</body>
+</html>
