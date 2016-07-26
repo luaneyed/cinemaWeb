@@ -2,64 +2,27 @@
 <html>
 	<head>
 		<title>Movie Surfer</title>
-	</head>
+		<script src="movielist.js"></script>
+		</head>
 	<body>
 		<p> Choose Movie you want to watch </p>
-		<form action = "timetable.html" method="GET">
-			<!--			<script src="./example.js"></script>-->
+		<form>
 			<script>
-				var one = new Array();
-				var response;
-
-				function readFile(file){
-					var rawFile = new XMLHttpRequest();
-					console.log("hoho");
-					rawFile.open("GET",file,true);
-					console.log("hoho1")
-					rawFile.onreadystatechange = function(){
-						if(rawFile.readyState === 4){
-							if(rawFile.status === 200 || rawFile.status == 0){
-								console.log("hoho2");
-								var allText = rawFile.responseText;
-								var response = JSON.parse(allText);
-								console.log("hoho3");
-								console.log(response[0].title);
-								var len = response.length;
-								for (var i =0; i < len; i++){
-									one.push(response[i].title);
-									var x = document.createElement('input');
-									x.setAttribute("type","checkbox");
-									x.setAttribute("id", response[i].title);
-									x.setAttribute("name", response[i].title);
-									x.setAttribute("label", response[i].title);
-
-									document.body.appendChild(x);
-								}
-							}else{
-								console.log("error");
-								alert("error");
-							}
-						}else{
-							console.log("error1");
-							alert("error");
-						}
-					}
-				}
-				readFile('../resources/example.json');
 				function testJS(){
 					var url = 'http://52.26.85.179/cinemaWeb/html/timetable.html?'
-					//var b = new Array();
-					var b ="";
-					var a =0;
-					window.alert(one[0]);
-					for(var i=0; i<one.length; i++){
-						if(document.getElementById(one[i]).checked){
-							b = b + document.getElementById(one[i]).name + ",";
-							a++;
-						}
-					}
-					b = b.substring(0,b.length-1);
+					
+					var movieTarget = document.getElementById("movie");
+					var b =	movieTarget.options[movieTarget.selectedIndex].value;
 					url = url + "movie="+encodeURIComponent(b)+'&';
+
+					var theaterTarget = document.getElementById("theater");
+					var c = theaterTarget.options[theaterTarget.selectedIndex].value;
+					url = url + "theater="+encodeURIComponent(c)+'&';
+
+					var currentDate = $('#datepicker').datepicker("getDate");
+					var d = currentDate.toISOString().substring(0,10);
+					url = url + "date="+encodeURIComponent(d);
+
 					document.location.href = url;
 				}
 			</script>

@@ -11,7 +11,7 @@ function processRequest(e){
 		movielist.setAttribute("id","movieSelect");
 		document.body.appendChild(movielist);
 		
-		for(var i = 0, len = response.length; i < len; i++){
+		for(var i = 0, len = response.length; i < 10; i++){
 			var title = response[i].title;
 			one.push(response[i].title);
 			var z = document.createElement("option");
