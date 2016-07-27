@@ -473,7 +473,7 @@ var Hashtable = (function(UNDEFINED) {
 
 
 var xhr = new XMLHttpRequest();
-xhr.open('GET', "http://52.78.67.177", true);
+xhr.open('GET', "http://52.78.67.177/plays", true);
 xhr.send();
 var movie;
 var theater;
