@@ -41,6 +41,7 @@ function processRequest(e) {
 	for (var i=0, len=result.length; i<len; i++){
 		movieList.push(result[i]["title"]+" : " + result[i]["option"] +" : " + result[i]["age"]);
 	}
+	movieList = array_unique(movieList);
 
 	for(var i=0, len=movieList.size(); i<len; i++){
 		var Child = new Array();
@@ -49,8 +50,10 @@ function processRequest(e) {
 				Child.push(response[i]["theater"]+" : "+response[i]["screen"])
 			}
 		}
+		Child = array_unique(Child);
 		theaterList.push(Child);
 	}
+	theaterList = array_unique(theaterList);
 
 	for(var i=0; i<movieList.size(); i++){
 		var Child1 = new Array();
@@ -62,10 +65,13 @@ function processRequest(e) {
 					Child2.push(response[k]["startTime"]+" ~ "+response[k]["endTime"]+" ( 잔여석"+response[k]["leftSeat"]+")");
 				}
 			}
+			Child2 = array_unique(Child2);
 			Child1.push(Child2);
 		}
+		Child1 = array_unique(Child1);
 		timetableList.push(Child1);
 	}
+	timetableList = array_unique(timetableList);
 }
 window.onload = function(){
 	var url = document.location.href,
