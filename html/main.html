@@ -20,7 +20,7 @@
 					url = url + "theater="+encodeURIComponent(c)+'&';
 
 					var currentDate = $('#datepicker').datepicker("getDate");
-					var d = currentDate.toISOString().substring(6,10);
+					var d = currentDate.toISOString().substring(0,10);
 					url = url + "date="+encodeURIComponent(d);
 
 					document.location.href = url;

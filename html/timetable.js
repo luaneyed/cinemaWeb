@@ -479,12 +479,13 @@ var movie;
 var theater;
 var date;
 var response;
-var a=0, b=0, c=0;
+var a=0, b=0;
 var result= new Array();
 var movieList = new HashSet();
 var theaterList = new HashSet();
 var timetableList = new HashSet();
 xhr.addEventListener("readystatechange", processRequest, false);
+var currentDate;
 
 function processRequest(e) {
 	if (xhr.readyState == 4) {
@@ -552,9 +553,38 @@ window.onload = function(){
 	movie = data["movie"];
 	theater = data["theater"];
 
-	month=data["date"].split("-")[0];
-	day = data["date"].split('-')[1];
+	currentDate=new Date(data["date"]);
+
+	month=data["date"].split("-")[1];
+	day = data["date"].split('-')[2];
 	if(movie=="") a = 1;
 	if(theater=="") b = 1;
 }
+function yesterday(){
+	var url = 'http://52.26.85.179/cinemaWeb/html/timetable.html?'
 
+	url = url + "movie="+encodeURIComponent(movie)+'&';
+
+	url = url + "theater="+encodeURIComponent(theater)+'&';
+
+	var yesterdayDate = currentDate-1;
+	var d = yesterdayDate.toISOString().substring(0,10);
+
+	url = url + "date="+encodeURIComponent(d);
+
+	document.location.href = url;
+}
+
+function tomorrow(){
+	var url = 'http://52.26.85.179/cinemaWeb/html/timetable.html?'
+
+	url = url + "movie="+encodeURIComponent(movie)+'&';
+
+	url = url + "theater="+encodeURIComponent(theater)+'&';
+
+	var tomorrowDate = currentDate+1;
+	var d = tomorrowDate.toISOString().substring(0,10);
+	url = url + "date="+encodeURIComponent(d);
+
+	document.location.href = url;
+}
