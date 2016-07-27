@@ -8,23 +8,34 @@
     border-bottom: 5px solid #002699;
     height : 10%;
 }
-
+#logo{
+    height: 80px;
+    display: inline-block;
+}
+h1 {
+    font-family : Calibri;
+    font-size: 50px;
+    color : #0B0F2E;
+    margin-bottom : 10px;
+}
+.brand_container{
+    display: inline-block;
+    height: 100%;
+}
 .brand{
-    width : 20%;
     margin-left : 3%;
     margin-right : 3%;
-    height : 30%;
+    height : 100%;
     position : relative;
     float : right;
 }
-
 
 /*(s) 검색 */
 .search{
     width : 60%;
     position : relative;
     clear : both;
-    margin : auto;
+    margin : 5px auto;
     border : #002699 solid 15px;
     border-radius: 5px;
 }
@@ -62,11 +73,14 @@ input{
 /*(e) 검색 */
 
 /*(s) 포스터*/
-.current{
-    position : relative;
-    margin : auto;
-    width: 10%;
-    height: 10%;
+.slider-for{
+    width: 60%;
+    margin: 5px auto;
+}
+
+.slider-nav{
+    width: 80%;
+    margin: 5px auto;
 }
 
 .slide {

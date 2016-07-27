@@ -1,0 +1,80 @@
+body{
+    background-color : #AEB6CE;
+}
+
+p {
+    font-family: Verdana;
+}
+
+table {
+    font-family: Verdana;
+}
+
+.container{
+    width : 60%;
+    margin: auto;
+    padding-bottom: inherit;
+}
+
+.slick_container{
+    position : fixed;
+    margin-top: 20px;
+    background-color : white;
+    border-bottom: solid #002699;
+}
+
+.date {
+    text-align: center;
+}
+
+#selected {
+    color : #002699;
+    background-color : lightblue;
+}
+
+.onemovie{
+    margin-top: 20px;
+    background-color : white;
+
+}
+
+.poster{
+    margin-left : 5%;
+    margin-top : 30px;
+    position : relative;
+    float : left;
+    width : 30%;
+}
+
+.cover {
+    margin-right : 5%;
+    margin-top : 30px;
+    position : relative;
+    float : right;
+    width : 60%;
+ }
+
+.middle{
+    margin-left : 5%;
+    position : relative;
+    clear : both;
+    margin-top : 30px;
+}
+
+table{
+    text-align: center;
+    margin-bottom: auto;
+}
+
+.screen{
+    border: #002699 solid;
+}
+.time {
+    border: #002699 solid;
+}
+
+.bottom{
+    margin-left : 5%;
+    position : relative;
+    clear : both;
+}

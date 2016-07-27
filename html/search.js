@@ -28,7 +28,11 @@ var main = function(){
         url = url + "theater="+encodeURIComponent(c)+'&';
 
         var currentDate = $('#datepicker').datepicker("getDate");
+        currentDate.setDate(currentDate.getDate()+1);
+        // var day =$('#datepicker').datepicker("getDate").getDate();
         var d = currentDate.toISOString().substring(0,10);
+        console.log(d);
+        // console.log(day);
         url = url + "date="+encodeURIComponent(d);
 
         document.location.href = url;
@@ -69,6 +73,8 @@ var main = function(){
         focusOnSelect: true,
         infinite : true
     });
+
+
 };
 
 

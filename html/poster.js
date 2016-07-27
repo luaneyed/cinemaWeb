@@ -28,6 +28,10 @@ function processRequest(e){
         document.getElementById("b_poster").setAttribute("src", response[a]["imageURL"]);
     }
 // document.getElementById("b_poster").setAttribute("src","http://image2.megabox.co.kr/mop/poster/2016/93/B66B0E-C1CD-436B-B5C7-C17631A4D08C.medium.jpg")
+//     for(var i =0; i< response.length; i++){
+//         // document.getElementById("s_poster"+(i+1).toString()).onclick = bigPoster(document.getElementById("s_poster"+(i+1).toString()).src);
+//         document.getElementById("s_poster"+(i+1).toString()).addEventListener("click",bigPoster(document.getElementById("s_poster"+(i+1).toString()).src))
+//     }
     // document.getElementById("s_poster1").onclick = bigPoster(document.getElementById("s_poster1").src);
 }
 
