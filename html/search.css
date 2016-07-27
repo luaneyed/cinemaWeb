@@ -1,0 +1,76 @@
+.container{
+    width : 80%;
+    background-color: rgba(255, 255, 255, 0.95);
+    marign : auto;
+}
+
+.header {
+    border-bottom: 5px solid #002699;
+    height : 10%;
+}
+
+.brand{
+    width : 20%;
+    margin-left : 3%;
+    margin-right : 3%;
+    height : 30%;
+    position : relative;
+    float : right;
+}
+
+
+/*(s) 검색 */
+.search{
+    width : 60%;
+    position : relative;
+    clear : both;
+    margin : auto;
+    border : #002699 solid 15px;
+    border-radius: 5px;
+}
+
+select{
+    margin : 1%;
+    width : 27%;
+}
+
+input{
+    margin : 1%;
+    width : 27%;
+}
+
+#theater{
+    margin-left: 2%;
+    margin-right: 1%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    width : 27%;
+    text-align : center;
+
+}
+
+.btn{
+    margin-left: 1%;
+    margin-right : 2%;
+    margin-top : 1%;
+    margin-bottom : 1%;
+    width : 5.4%;
+    height : 80%;
+    float : right;
+    boarder : solid #002699;
+}
+/*(e) 검색 */
+
+/*(s) 포스터*/
+.current{
+    position : relative;
+    margin : auto;
+    width: 10%;
+    height: 10%;
+}
+
+.slide {
+    width : 200px;
+    height : 200px;
+}
+/*(e) 포스터 */

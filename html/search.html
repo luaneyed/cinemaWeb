@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width height=device-height">
+    <title>First</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">        <!-- calendar -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link type="text/css" rel="stylesheet" href="search.css"/>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class = "header">
+            <div id="logo">
+                <h>Title</h>
+                <a href="http://www.cgv.co.kr"><img class = "brand" id="cgv" src="img/cgv.png"/></a>
+                <a href="http://www.lottecinema.co.kr/LCHS/index.aspx"><img class = "brand"  src="img/lotte.jpg"/></a>
+                <a href="http://www.megabox.co.kr"><img class = "brand" src="img/mega.jpg"/></a>
+            </div>
+        </div>
+
+
+        <div id="content">
+
+            <!--(s) 검색 -->
+            <div class="search">
+                    <select id="theater">
+                        <option value="">극장선택</option>
+                        <option value="롯데대전(백화점)">롯데대전(백화점)</option>
+                        <option value="롯데대전둔산(월평동)">롯데대전둔산(월평동)</option>
+                        <option value=">CGV대전">CGV대전</option>
+                        <option value="CGV대전가오">CGV대전가오</option>
+                        <option value="CGV대전탐방">CGV대전탐방</option>
+                        <option value="CGV대전터미널">CGV대전터미널</option>
+                        <option value="CGV유성온천">CGV유성온천</option>
+                        <option value="CGV유성노은">CGV유성노은</option>
+                        <option value="MEGABOX대전">MEGABOX대전</option>
+                    </select>
+                    <input type="text" value="날짜선택" id="datepicker" />
+                    <select id="movie">
+                        <option value="">영화선택</option>
+                    </select>
+                    <img class="btn" src="img/search.png"/>
+            </div>
+            <!--(e) 검색 -->
+
+            <div class="slider-for">
+                <img  class='current' id="b_poster"/>
+            </div>
+
+            <div class="slick_container">
+                <div class = 'carousel-images slider-nav'>
+                    <div><img class = 'slide' id='s_poster1' alt="1"></div>
+                    <div><img class = 'slide' id="s_poster2" alt="2"></div>
+                    <div><img class = 'slide' id='s_poster3' alt="3"></div>
+                    <div><img class = 'slide' id='s_poster4' alt="4"></div>
+                    <div><img class = 'slide' id="s_ppster5" alt="5"></div>
+                    <div><img class = 'slide' id="s_poster6" alt="6"></div>
+                    <div><img class = 'slide' id="s_poster7" alt="7"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="search.js"></script>
+    <script src="movielist.js"></script>
+    <script src="format.js"></script>
+</body>
+</html>
