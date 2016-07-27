@@ -1,5 +1,5 @@
 var xhr = new XMLHttpRequest();
-xhr.open('GET', "http://52.78.67.177:8080/posters", true);
+xhr.open('GET', "http://52.78.67.177:8080/movies", true);
 xhr.send();
 var response;
 
@@ -19,15 +19,22 @@ function processRequest(e){
         //     document.getElementById("movie").appendChild(z);
         // }
 
-        for(var i =0; i< 7; i++){
-            var posterSrc = response[i]["poster"];
-            document.getElementById("s_poster{0}".format(i)).setAttribute("src", posterSrc);
+        for(var i =0; i< response.length; i++){
+            var posterSrc = response[i]["imageURL"];
+            // var posterSrc = "http://image2.megabox.co.kr/mop/poster/2016/64/728162-7786-4E25-8B7E-CE8A678F4FCA.medium.jpg";
+            document.getElementById("s_poster"+(i+1).toString()).setAttribute("src", posterSrc);
         }
-        document.getElementById("b_poster").setAttribute("src", response[7]);
+        var a = makeRandom(0,response.length-1);
+        document.getElementById("b_poster").setAttribute("src", response[a]["imageURL"]);
     }
-    document.getElementById("s_poster{0}")
+// document.getElementById("b_poster").setAttribute("src","http://image2.megabox.co.kr/mop/poster/2016/93/B66B0E-C1CD-436B-B5C7-C17631A4D08C.medium.jpg")
+    // document.getElementById("s_poster1").onclick = bigPoster(document.getElementById("s_poster1").src);
 }
-//
-// function bigPoster(){
-//     document.getElementById("b_poster").setAttribute("src", )
+
+// function bigPoster(src){
+//     document.getElementById("b_poster").setAttribute("src", src);
 // }
+function makeRandom(min, max){
+    var RandVal = Math.random() * (max- min) + min;
+    return Math.floor(RandVal);
+}
